@@ -1,8 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from globals_var import logger
-from utils import string,emailer
+import utilpy.web
 @api_view(["GET"])
 def service_state(request):
-    logger.info(dir(request.META))
-    return Response({"code":200,"data":{"ip":request.META.get("HTTP_X_FORWARDED_FOR").split(',')[0],"UA":request.META.get("HTTP_USER_AGENT")}})
+    logger.info((request.META))
+    return Response({"code":200,"msg":"succeed","data":{"ip":utilpy.web.get_real_ip(request),"UA":utilpy.web.get_ua(request)}})

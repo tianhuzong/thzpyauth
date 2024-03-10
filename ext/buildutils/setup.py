@@ -8,6 +8,7 @@ extensions = [
     Extension("utils.libhash",["./utils/libhash/hash.pyx"],language="c++"),
     Extension("utils.encrypt",["./utils/encrypt/encrypt.pyx"],language="c++"),
     Extension("utils.emailer",["./utils/emailer/emailer.pyx"],language="c++"),
+    Extension("utils.web",["./utils/web/web.pyx"],language="c++"),
     
 ]
 setup(name="utils",ext_modules=cythonize(extensions),packages=find_packages(),package_data={'': ['__init__.py']},include_dirs = [numpy.get_include()],include_package_data=True)
