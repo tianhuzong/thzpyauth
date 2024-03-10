@@ -10,7 +10,7 @@ cpdef str get_real_ip(object request):
     """
     cdef str real_ip
     if (real_ip := request.META.get("HTTP_X_FORWARDED_FOR")) != None: 
-        return real_ip.split()[0]
+        return real_ip.split(',')[0]
     elif (real_ip := request.META.get("HTTP_X_REAL_IP")) != None :
         return real_ip
     else: return request.META.get("REMOTE_ADDR")

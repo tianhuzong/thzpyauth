@@ -1627,24 +1627,12 @@ typedef struct {
     int flag;
 } __Pyx_CachedCFunction;
 
-/* CallUnboundCMethod0.proto */
-static PyObject* __Pyx__CallUnboundCMethod0(__Pyx_CachedCFunction* cfunc, PyObject* self);
+/* CallUnboundCMethod1.proto */
+static PyObject* __Pyx__CallUnboundCMethod1(__Pyx_CachedCFunction* cfunc, PyObject* self, PyObject* arg);
 #if CYTHON_COMPILING_IN_CPYTHON
-#define __Pyx_CallUnboundCMethod0(cfunc, self)\
-    (likely((cfunc)->func) ?\
-        (likely((cfunc)->flag == METH_NOARGS) ?  (*((cfunc)->func))(self, NULL) :\
-         (PY_VERSION_HEX >= 0x030600B1 && likely((cfunc)->flag == METH_FASTCALL) ?\
-            (PY_VERSION_HEX >= 0x030700A0 ?\
-                (*(__Pyx_PyCFunctionFast)(void*)(PyCFunction)(cfunc)->func)(self, &__pyx_empty_tuple, 0) :\
-                (*(__Pyx_PyCFunctionFastWithKeywords)(void*)(PyCFunction)(cfunc)->func)(self, &__pyx_empty_tuple, 0, NULL)) :\
-          (PY_VERSION_HEX >= 0x030700A0 && (cfunc)->flag == (METH_FASTCALL | METH_KEYWORDS) ?\
-            (*(__Pyx_PyCFunctionFastWithKeywords)(void*)(PyCFunction)(cfunc)->func)(self, &__pyx_empty_tuple, 0, NULL) :\
-            (likely((cfunc)->flag == (METH_VARARGS | METH_KEYWORDS)) ?  ((*(PyCFunctionWithKeywords)(void*)(PyCFunction)(cfunc)->func)(self, __pyx_empty_tuple, NULL)) :\
-               ((cfunc)->flag == METH_VARARGS ?  (*((cfunc)->func))(self, __pyx_empty_tuple) :\
-               __Pyx__CallUnboundCMethod0(cfunc, self)))))) :\
-        __Pyx__CallUnboundCMethod0(cfunc, self))
+static CYTHON_INLINE PyObject* __Pyx_CallUnboundCMethod1(__Pyx_CachedCFunction* cfunc, PyObject* self, PyObject* arg);
 #else
-#define __Pyx_CallUnboundCMethod0(cfunc, self)  __Pyx__CallUnboundCMethod0(cfunc, self)
+#define __Pyx_CallUnboundCMethod1(cfunc, self, arg)  __Pyx__CallUnboundCMethod1(cfunc, self, arg)
 #endif
 
 /* GetItemInt.proto */
@@ -2074,7 +2062,8 @@ int __pyx_module_is_main_utils__web = 0;
 /* Implementation of "utils.web" */
 /* #### Code section: global_var ### */
 /* #### Code section: string_decls ### */
-static const char __pyx_k__4[] = "?";
+static const char __pyx_k_[] = ",";
+static const char __pyx_k__5[] = "?";
 static const char __pyx_k_get[] = "get";
 static const char __pyx_k_IPUA[] = "\n\345\214\205\345\220\253\350\216\267\345\217\226IP\343\200\201UA\347\232\204\345\207\275\346\225\260\n";
 static const char __pyx_k_META[] = "META";
@@ -2127,12 +2116,13 @@ typedef struct {
   #endif
   #if CYTHON_USE_MODULE_STATE
   #endif
+  PyObject *__pyx_kp_s_;
   PyObject *__pyx_n_s_HTTP_USER_AGENT;
   PyObject *__pyx_n_s_HTTP_X_FORWARDED_FOR;
   PyObject *__pyx_n_s_HTTP_X_REAL_IP;
   PyObject *__pyx_n_s_META;
   PyObject *__pyx_n_s_REMOTE_ADDR;
-  PyObject *__pyx_n_s__4;
+  PyObject *__pyx_n_s__5;
   PyObject *__pyx_n_s_asyncio_coroutines;
   PyObject *__pyx_n_s_cline_in_traceback;
   PyObject *__pyx_n_s_get;
@@ -2147,9 +2137,9 @@ typedef struct {
   PyObject *__pyx_n_s_utils_web;
   PyObject *__pyx_kp_u_utils_web;
   PyObject *__pyx_kp_s_utils_web_web_pyx;
-  PyObject *__pyx_tuple_;
-  PyObject *__pyx_codeobj__2;
+  PyObject *__pyx_tuple__2;
   PyObject *__pyx_codeobj__3;
+  PyObject *__pyx_codeobj__4;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -2192,12 +2182,13 @@ static int __pyx_m_clear(PyObject *m) {
   #ifdef __Pyx_FusedFunction_USED
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
+  Py_CLEAR(clear_module_state->__pyx_kp_s_);
   Py_CLEAR(clear_module_state->__pyx_n_s_HTTP_USER_AGENT);
   Py_CLEAR(clear_module_state->__pyx_n_s_HTTP_X_FORWARDED_FOR);
   Py_CLEAR(clear_module_state->__pyx_n_s_HTTP_X_REAL_IP);
   Py_CLEAR(clear_module_state->__pyx_n_s_META);
   Py_CLEAR(clear_module_state->__pyx_n_s_REMOTE_ADDR);
-  Py_CLEAR(clear_module_state->__pyx_n_s__4);
+  Py_CLEAR(clear_module_state->__pyx_n_s__5);
   Py_CLEAR(clear_module_state->__pyx_n_s_asyncio_coroutines);
   Py_CLEAR(clear_module_state->__pyx_n_s_cline_in_traceback);
   Py_CLEAR(clear_module_state->__pyx_n_s_get);
@@ -2212,9 +2203,9 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_utils_web);
   Py_CLEAR(clear_module_state->__pyx_kp_u_utils_web);
   Py_CLEAR(clear_module_state->__pyx_kp_s_utils_web_web_pyx);
-  Py_CLEAR(clear_module_state->__pyx_tuple_);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__2);
+  Py_CLEAR(clear_module_state->__pyx_tuple__2);
   Py_CLEAR(clear_module_state->__pyx_codeobj__3);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__4);
   return 0;
 }
 #endif
@@ -2235,12 +2226,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   #ifdef __Pyx_FusedFunction_USED
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
+  Py_VISIT(traverse_module_state->__pyx_kp_s_);
   Py_VISIT(traverse_module_state->__pyx_n_s_HTTP_USER_AGENT);
   Py_VISIT(traverse_module_state->__pyx_n_s_HTTP_X_FORWARDED_FOR);
   Py_VISIT(traverse_module_state->__pyx_n_s_HTTP_X_REAL_IP);
   Py_VISIT(traverse_module_state->__pyx_n_s_META);
   Py_VISIT(traverse_module_state->__pyx_n_s_REMOTE_ADDR);
-  Py_VISIT(traverse_module_state->__pyx_n_s__4);
+  Py_VISIT(traverse_module_state->__pyx_n_s__5);
   Py_VISIT(traverse_module_state->__pyx_n_s_asyncio_coroutines);
   Py_VISIT(traverse_module_state->__pyx_n_s_cline_in_traceback);
   Py_VISIT(traverse_module_state->__pyx_n_s_get);
@@ -2255,9 +2247,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_utils_web);
   Py_VISIT(traverse_module_state->__pyx_kp_u_utils_web);
   Py_VISIT(traverse_module_state->__pyx_kp_s_utils_web_web_pyx);
-  Py_VISIT(traverse_module_state->__pyx_tuple_);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__2);
+  Py_VISIT(traverse_module_state->__pyx_tuple__2);
   Py_VISIT(traverse_module_state->__pyx_codeobj__3);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__4);
   return 0;
 }
 #endif
@@ -2288,12 +2280,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #if CYTHON_USE_MODULE_STATE
 #endif
+#define __pyx_kp_s_ __pyx_mstate_global->__pyx_kp_s_
 #define __pyx_n_s_HTTP_USER_AGENT __pyx_mstate_global->__pyx_n_s_HTTP_USER_AGENT
 #define __pyx_n_s_HTTP_X_FORWARDED_FOR __pyx_mstate_global->__pyx_n_s_HTTP_X_FORWARDED_FOR
 #define __pyx_n_s_HTTP_X_REAL_IP __pyx_mstate_global->__pyx_n_s_HTTP_X_REAL_IP
 #define __pyx_n_s_META __pyx_mstate_global->__pyx_n_s_META
 #define __pyx_n_s_REMOTE_ADDR __pyx_mstate_global->__pyx_n_s_REMOTE_ADDR
-#define __pyx_n_s__4 __pyx_mstate_global->__pyx_n_s__4
+#define __pyx_n_s__5 __pyx_mstate_global->__pyx_n_s__5
 #define __pyx_n_s_asyncio_coroutines __pyx_mstate_global->__pyx_n_s_asyncio_coroutines
 #define __pyx_n_s_cline_in_traceback __pyx_mstate_global->__pyx_n_s_cline_in_traceback
 #define __pyx_n_s_get __pyx_mstate_global->__pyx_n_s_get
@@ -2308,9 +2301,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_utils_web __pyx_mstate_global->__pyx_n_s_utils_web
 #define __pyx_kp_u_utils_web __pyx_mstate_global->__pyx_kp_u_utils_web
 #define __pyx_kp_s_utils_web_web_pyx __pyx_mstate_global->__pyx_kp_s_utils_web_web_pyx
-#define __pyx_tuple_ __pyx_mstate_global->__pyx_tuple_
-#define __pyx_codeobj__2 __pyx_mstate_global->__pyx_codeobj__2
+#define __pyx_tuple__2 __pyx_mstate_global->__pyx_tuple__2
 #define __pyx_codeobj__3 __pyx_mstate_global->__pyx_codeobj__3
+#define __pyx_codeobj__4 __pyx_mstate_global->__pyx_codeobj__4
 /* #### Code section: module_code ### */
 
 /* "utils/web/web.pyx":5
@@ -2346,7 +2339,7 @@ static PyObject *__pyx_f_5utils_3web_get_real_ip(PyObject *__pyx_v_request, CYTH
  *     """
  *     cdef str real_ip
  *     if (real_ip := request.META.get("HTTP_X_FORWARDED_FOR")) != None:             # <<<<<<<<<<<<<<
- *         return real_ip.split()[0]
+ *         return real_ip.split(',')[0]
  *     elif (real_ip := request.META.get("HTTP_X_REAL_IP")) != None :
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_request, __pyx_n_s_META); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
@@ -2388,12 +2381,12 @@ static PyObject *__pyx_f_5utils_3web_get_real_ip(PyObject *__pyx_v_request, CYTH
     /* "utils/web/web.pyx":13
  *     cdef str real_ip
  *     if (real_ip := request.META.get("HTTP_X_FORWARDED_FOR")) != None:
- *         return real_ip.split()[0]             # <<<<<<<<<<<<<<
+ *         return real_ip.split(',')[0]             # <<<<<<<<<<<<<<
  *     elif (real_ip := request.META.get("HTTP_X_REAL_IP")) != None :
  *         return real_ip
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = __Pyx_CallUnboundCMethod0(&__pyx_umethod_PyString_Type_split, __pyx_v_real_ip); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PyString_Type_split, __pyx_v_real_ip, __pyx_kp_s_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -2407,14 +2400,14 @@ static PyObject *__pyx_f_5utils_3web_get_real_ip(PyObject *__pyx_v_request, CYTH
  *     """
  *     cdef str real_ip
  *     if (real_ip := request.META.get("HTTP_X_FORWARDED_FOR")) != None:             # <<<<<<<<<<<<<<
- *         return real_ip.split()[0]
+ *         return real_ip.split(',')[0]
  *     elif (real_ip := request.META.get("HTTP_X_REAL_IP")) != None :
  */
   }
 
   /* "utils/web/web.pyx":14
  *     if (real_ip := request.META.get("HTTP_X_FORWARDED_FOR")) != None:
- *         return real_ip.split()[0]
+ *         return real_ip.split(',')[0]
  *     elif (real_ip := request.META.get("HTTP_X_REAL_IP")) != None :             # <<<<<<<<<<<<<<
  *         return real_ip
  *     else: return request.META.get("REMOTE_ADDR")
@@ -2456,7 +2449,7 @@ static PyObject *__pyx_f_5utils_3web_get_real_ip(PyObject *__pyx_v_request, CYTH
   if (__pyx_t_5) {
 
     /* "utils/web/web.pyx":15
- *         return real_ip.split()[0]
+ *         return real_ip.split(',')[0]
  *     elif (real_ip := request.META.get("HTTP_X_REAL_IP")) != None :
  *         return real_ip             # <<<<<<<<<<<<<<
  *     else: return request.META.get("REMOTE_ADDR")
@@ -2469,7 +2462,7 @@ static PyObject *__pyx_f_5utils_3web_get_real_ip(PyObject *__pyx_v_request, CYTH
 
     /* "utils/web/web.pyx":14
  *     if (real_ip := request.META.get("HTTP_X_FORWARDED_FOR")) != None:
- *         return real_ip.split()[0]
+ *         return real_ip.split(',')[0]
  *     elif (real_ip := request.META.get("HTTP_X_REAL_IP")) != None :             # <<<<<<<<<<<<<<
  *         return real_ip
  *     else: return request.META.get("REMOTE_ADDR")
@@ -2888,12 +2881,13 @@ static PyMethodDef __pyx_methods[] = {
 
 static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
+    {&__pyx_kp_s_, __pyx_k_, sizeof(__pyx_k_), 0, 0, 1, 0},
     {&__pyx_n_s_HTTP_USER_AGENT, __pyx_k_HTTP_USER_AGENT, sizeof(__pyx_k_HTTP_USER_AGENT), 0, 0, 1, 1},
     {&__pyx_n_s_HTTP_X_FORWARDED_FOR, __pyx_k_HTTP_X_FORWARDED_FOR, sizeof(__pyx_k_HTTP_X_FORWARDED_FOR), 0, 0, 1, 1},
     {&__pyx_n_s_HTTP_X_REAL_IP, __pyx_k_HTTP_X_REAL_IP, sizeof(__pyx_k_HTTP_X_REAL_IP), 0, 0, 1, 1},
     {&__pyx_n_s_META, __pyx_k_META, sizeof(__pyx_k_META), 0, 0, 1, 1},
     {&__pyx_n_s_REMOTE_ADDR, __pyx_k_REMOTE_ADDR, sizeof(__pyx_k_REMOTE_ADDR), 0, 0, 1, 1},
-    {&__pyx_n_s__4, __pyx_k__4, sizeof(__pyx_k__4), 0, 0, 1, 1},
+    {&__pyx_n_s__5, __pyx_k__5, sizeof(__pyx_k__5), 0, 0, 1, 1},
     {&__pyx_n_s_asyncio_coroutines, __pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 0, 1, 1},
     {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
     {&__pyx_n_s_get, __pyx_k_get, sizeof(__pyx_k_get), 0, 0, 1, 1},
@@ -2929,10 +2923,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     """
  *     IP
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_n_s_request); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 5, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple_);
-  __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_utils_web_web_pyx, __pyx_n_s_get_real_ip, 5, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_n_s_request); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__2);
+  __Pyx_GIVEREF(__pyx_tuple__2);
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_utils_web_web_pyx, __pyx_n_s_get_real_ip, 5, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 5, __pyx_L1_error)
 
   /* "utils/web/web.pyx":17
  *         return real_ip
@@ -2941,7 +2935,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     """
  *     UA
  */
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_utils_web_web_pyx, __pyx_n_s_get_ua, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_utils_web_web_pyx, __pyx_n_s_get_ua, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3323,7 +3317,7 @@ if (!__Pyx_RefNanny) {
  *     """
  *     IP
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_5utils_3web_1get_real_ip, 0, __pyx_n_s_get_real_ip, NULL, __pyx_n_s_utils_web, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_5utils_3web_1get_real_ip, 0, __pyx_n_s_get_real_ip, NULL, __pyx_n_s_utils_web, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_real_ip, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3335,7 +3329,7 @@ if (!__Pyx_RefNanny) {
  *     """
  *     UA
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_5utils_3web_3get_ua, 0, __pyx_n_s_get_ua, NULL, __pyx_n_s_utils_web, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_5utils_3web_3get_ua, 0, __pyx_n_s_get_ua, NULL, __pyx_n_s_utils_web, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_ua, __pyx_t_2) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3756,22 +3750,55 @@ static int __Pyx_TryUnpackUnboundCMethod(__Pyx_CachedCFunction* target) {
     return 0;
 }
 
-/* CallUnboundCMethod0 */
-static PyObject* __Pyx__CallUnboundCMethod0(__Pyx_CachedCFunction* cfunc, PyObject* self) {
-    PyObject *args, *result = NULL;
-    if (unlikely(!cfunc->method) && unlikely(__Pyx_TryUnpackUnboundCMethod(cfunc) < 0)) return NULL;
-#if CYTHON_ASSUME_SAFE_MACROS
-    args = PyTuple_New(1);
-    if (unlikely(!args)) goto bad;
-    Py_INCREF(self);
-    PyTuple_SET_ITEM(args, 0, self);
-#else
-    args = PyTuple_Pack(1, self);
-    if (unlikely(!args)) goto bad;
+/* CallUnboundCMethod1 */
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_CallUnboundCMethod1(__Pyx_CachedCFunction* cfunc, PyObject* self, PyObject* arg) {
+    if (likely(cfunc->func)) {
+        int flag = cfunc->flag;
+        if (flag == METH_O) {
+            return (*(cfunc->func))(self, arg);
+        } else if ((PY_VERSION_HEX >= 0x030600B1) && flag == METH_FASTCALL) {
+            #if PY_VERSION_HEX >= 0x030700A0
+                return (*(__Pyx_PyCFunctionFast)(void*)(PyCFunction)cfunc->func)(self, &arg, 1);
+            #else
+                return (*(__Pyx_PyCFunctionFastWithKeywords)(void*)(PyCFunction)cfunc->func)(self, &arg, 1, NULL);
+            #endif
+        } else if ((PY_VERSION_HEX >= 0x030700A0) && flag == (METH_FASTCALL | METH_KEYWORDS)) {
+            return (*(__Pyx_PyCFunctionFastWithKeywords)(void*)(PyCFunction)cfunc->func)(self, &arg, 1, NULL);
+        }
+    }
+    return __Pyx__CallUnboundCMethod1(cfunc, self, arg);
+}
 #endif
+static PyObject* __Pyx__CallUnboundCMethod1(__Pyx_CachedCFunction* cfunc, PyObject* self, PyObject* arg){
+    PyObject *args, *result = NULL;
+    if (unlikely(!cfunc->func && !cfunc->method) && unlikely(__Pyx_TryUnpackUnboundCMethod(cfunc) < 0)) return NULL;
+#if CYTHON_COMPILING_IN_CPYTHON
+    if (cfunc->func && (cfunc->flag & METH_VARARGS)) {
+        args = PyTuple_New(1);
+        if (unlikely(!args)) goto bad;
+        Py_INCREF(arg);
+        PyTuple_SET_ITEM(args, 0, arg);
+        if (cfunc->flag & METH_KEYWORDS)
+            result = (*(PyCFunctionWithKeywords)(void*)(PyCFunction)cfunc->func)(self, args, NULL);
+        else
+            result = (*cfunc->func)(self, args);
+    } else {
+        args = PyTuple_New(2);
+        if (unlikely(!args)) goto bad;
+        Py_INCREF(self);
+        PyTuple_SET_ITEM(args, 0, self);
+        Py_INCREF(arg);
+        PyTuple_SET_ITEM(args, 1, arg);
+        result = __Pyx_PyObject_Call(cfunc->method, args, NULL);
+    }
+#else
+    args = PyTuple_Pack(2, self, arg);
+    if (unlikely(!args)) goto bad;
     result = __Pyx_PyObject_Call(cfunc->method, args, NULL);
-    Py_DECREF(args);
+#endif
 bad:
+    Py_XDECREF(args);
     return result;
 }
 
@@ -6140,7 +6167,7 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__4);
+        name = __Pyx_NewRef(__pyx_n_s__5);
     }
     return name;
 }
