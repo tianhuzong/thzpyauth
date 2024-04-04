@@ -5,5 +5,5 @@ app_name = "api"
 
 urlpatterns = [
     path('adduser/',view.adduser),
-    path('service_state',views.service_state,name="service_state"),
+    path('public/service_state/',views.service_state,name="service_state"),
 ]
