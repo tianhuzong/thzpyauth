@@ -1,6 +1,6 @@
 """这里面是公开API的类"""
 
-from base import RequestBasic
+from .base import RequestBasic
 
 class PublicApi(RequestBasic):
     """thzpyauth的公开接口"""
